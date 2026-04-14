@@ -1,32 +1,26 @@
-# ---------- STEP 1: Build Frontend ----------
+# Step 1: Build frontend
 FROM node:18 AS build
 
 WORKDIR /app
 
-COPY frontend/package*.json ./frontend/
-RUN cd frontend && npm install
-
 COPY frontend ./frontend
-RUN cd frontend && npm run build
+WORKDIR /app/frontend
+RUN npm install
+RUN npm run build
 
-# ---------- STEP 2: Backend ----------
+# Step 2: Backend setup
 FROM node:18
 
 WORKDIR /app
 
-# backend dependencies
-COPY backend/package*.json ./backend/
-RUN cd backend && npm install
-
-# backend code
 COPY backend ./backend
 
 # frontend build copy
 COPY --from=build /app/frontend/build ./frontend/build
 
 WORKDIR /app/backend
+RUN npm install
 
 EXPOSE 5000
 
-# start server
 CMD ["node", "server.js"]
