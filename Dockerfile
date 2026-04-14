@@ -9,14 +9,14 @@ RUN npm install
 RUN npm run build
 
 # Step 2: Backend setup
-FROM node:18
+FROM node:20
 
 WORKDIR /app
 
 COPY backend ./backend
 
 # frontend build copy
-COPY --from=build /app/frontend/build ./frontend/build
+COPY --from=build /app/frontend/dist ./frontend/build
 
 WORKDIR /app/backend
 RUN npm install
