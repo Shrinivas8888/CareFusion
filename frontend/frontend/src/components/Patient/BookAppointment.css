@@ -1,0 +1,360 @@
+.book-appointment-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Stepper */
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.stepper::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e5e7eb;
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s;
+}
+
+.step.active .step-number {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.step-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+}
+
+.step.active .step-label {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* Step Content */
+.step-content {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Department Section */
+.department-section {
+    margin-bottom: 2rem;
+}
+
+.department-name {
+    color: #1f2937;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.doctor-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.doctor-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+}
+
+.doctor-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.doctor-card h4 {
+    margin: 0.5rem 0;
+    color: #1f2937;
+}
+
+.specialization {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Selected Summary */
+.selected-doctor-summary,
+.selected-summary {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.selected-doctor-summary h3 {
+    margin: 0 0 0.25rem 0;
+    color: #1e40af;
+}
+
+.selected-doctor-summary p,
+.selected-summary p {
+    margin: 0.25rem 0;
+    color: #1e3a8a;
+}
+
+/* Date Picker */
+.date-picker-container {
+    margin: 2rem 0;
+}
+
+.date-picker {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.date-picker:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* Slots Grid */
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.slot-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.slot-card:not(.booked):hover {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.slot-card.booked {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f3f4f6;
+}
+
+.slot-time {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.status-available {
+    color: #059669;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-booked {
+    color: #dc2626;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.slot-capacity {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+.no-slots {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+}
+
+/* Confirmation */
+.confirmation-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+}
+
+.confirmation-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.confirmation-row:last-child {
+    border-bottom: none;
+}
+
+.confirmation-row.total {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #3b82f6;
+}
+
+.confirmation-row .label {
+    color: #6b7280;
+}
+
+.confirmation-row .value {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* Step Actions */
+.step-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: flex-end;
+}
+
+/* Success */
+.success-container {
+    text-align: center;
+    padding: 3rem;
+    animation: fadeIn 0.5s;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #10b981;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    animation: scaleIn 0.5s;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.success-container h2 {
+    color: #1f2937;
+    margin-bottom: 2rem;
+}
+
+.success-details {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.success-details p {
+    margin: 0.75rem 0;
+    color: #166534;
+}
+
+.success-details strong {
+    color: #14532d;
+    margin-right: 0.5rem;
+}
+
+.success-actions {
+    margin-top: 2rem;
+}
+
+.spinner {
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

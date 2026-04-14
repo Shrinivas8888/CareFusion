@@ -1,0 +1,95 @@
+[2026-03-24T17:44:02.900Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-03-24T17:44:04.003Z] [PDF Service] pdfjs-dist imported successfully
+[2026-03-24T17:44:04.047Z] [PDF Service] Loading PDF document...
+[2026-03-24T17:44:04.292Z] [PDF Service] PDF Loaded, pages: 1
+[2026-03-24T17:44:04.341Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1774362688161-962885752.pdf
+[2026-03-24T18:00:51.617Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-03-24T18:00:51.898Z] [PDF Service] pdfjs-dist imported successfully
+[2026-03-24T18:00:51.944Z] [PDF Service] Loading PDF document...
+[2026-03-24T18:00:52.081Z] [PDF Service] PDF Loaded, pages: 1
+[2026-03-24T18:00:52.129Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1774362688161-962885752.pdf
+[2026-03-28T06:20:19.199Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-03-28T06:20:26.421Z] [PDF Service] pdfjs-dist imported successfully
+[2026-03-28T06:20:27.029Z] [PDF Service] Loading PDF document...
+[2026-03-28T06:20:27.534Z] [PDF Service] PDF Loaded, pages: 1
+[2026-03-28T06:20:27.629Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1774362688161-962885752.pdf
+[2026-03-28T07:42:38.625Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-03-28T07:42:38.720Z] [PDF Service] pdfjs-dist imported successfully
+[2026-03-28T07:42:38.820Z] [PDF Service] Loading PDF document...
+[2026-03-28T07:42:38.966Z] [PDF Service] PDF Loaded, pages: 1
+[2026-03-28T07:42:39.139Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1774679208150-936590749.pdf
+[2026-04-07T13:36:00.254Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-07T13:36:00.463Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-07T13:36:00.464Z] [PDF Service] Loading PDF document...
+[2026-04-07T13:36:00.622Z] [PDF Service] PDF Loaded, pages: 2
+[2026-04-07T13:36:00.711Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1775568843499-381845610.pdf
+[2026-04-07T13:36:00.713Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-07T13:36:00.714Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-07T13:36:00.715Z] [PDF Service] Loading PDF document...
+[2026-04-07T13:36:00.718Z] [PDF Service] PDF Loaded, pages: 1
+[2026-04-07T13:36:00.747Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1774679208150-936590749.pdf
+[2026-04-10T06:50:57.507Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-10T06:50:57.823Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-10T06:50:57.848Z] [PDF Service] Loading PDF document...
+[2026-04-10T06:50:58.125Z] [PDF Service] PDF Loaded, pages: 2
+[2026-04-10T06:50:58.353Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1775568843499-381845610.pdf
+[2026-04-10T06:50:58.359Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-10T06:50:58.363Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-10T06:50:58.384Z] [PDF Service] Loading PDF document...
+[2026-04-10T06:50:58.389Z] [PDF Service] PDF Loaded, pages: 1
+[2026-04-10T06:50:58.462Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1774679208150-936590749.pdf
+[2026-04-10T17:12:02.656Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-10T17:12:02.894Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-10T17:12:02.925Z] [PDF Service] Loading PDF document...
+[2026-04-10T17:12:03.337Z] [PDF Service] CRITICAL ERROR: Invalid PDF structure.
+Error
+    at BaseExceptionClosure (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:22692:29)
+    at 3266 (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:22695:2)
+    at __webpack_require__ (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23117:41)
+    at file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:21680:73
+    at __webpack_require__.a (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23174:12)
+    at 9907 (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:21631:21)
+    at __webpack_require__ (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23117:41)
+    at file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23215:36
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-04-10T17:12:03.347Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-10T17:12:03.348Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-10T17:12:03.417Z] [PDF Service] Loading PDF document...
+[2026-04-10T17:12:03.457Z] [PDF Service] PDF Loaded, pages: 2
+[2026-04-10T17:12:03.749Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1775568843499-381845610.pdf
+[2026-04-13T18:00:32.091Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-13T18:00:32.946Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-13T18:00:32.995Z] [PDF Service] Loading PDF document...
+[2026-04-13T18:00:33.431Z] [PDF Service] CRITICAL ERROR: Invalid PDF structure.
+Error
+    at BaseExceptionClosure (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:22692:29)
+    at 3266 (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:22695:2)
+    at __webpack_require__ (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23117:41)
+    at file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:21680:73
+    at __webpack_require__.a (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23174:12)
+    at 9907 (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:21631:21)
+    at __webpack_require__ (file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23117:41)
+    at file:///D:/New%20folder%20(34)/Hospital%20(2)/Hospital/backend/node_modules/pdfjs-dist/legacy/build/pdf.mjs:23215:36
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[2026-04-13T18:00:33.439Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-13T18:00:33.441Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-13T18:00:33.454Z] [PDF Service] Loading PDF document...
+[2026-04-13T18:00:33.491Z] [PDF Service] PDF Loaded, pages: 2
+[2026-04-13T18:00:33.841Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1775568843499-381845610.pdf
+[2026-04-14T12:38:08.366Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-14T12:38:08.585Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-14T12:38:08.598Z] [PDF Service] Loading PDF document...
+[2026-04-14T12:38:08.710Z] [PDF Service] PDF Loaded, pages: 1
+[2026-04-14T12:38:08.760Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1776168366122-955047533.pdf
+[2026-04-14T12:39:30.018Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-14T12:39:30.020Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-14T12:39:30.023Z] [PDF Service] Loading PDF document...
+[2026-04-14T12:39:30.030Z] [PDF Service] PDF Loaded, pages: 1
+[2026-04-14T12:39:30.068Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1776170340158-235714818.pdf
+[2026-04-14T13:41:01.049Z] [PDF Service] Attempting to import pdfjs-dist from: pdfjs-dist/legacy/build/pdf.mjs
+[2026-04-14T13:41:01.214Z] [PDF Service] pdfjs-dist imported successfully
+[2026-04-14T13:41:01.225Z] [PDF Service] Loading PDF document...
+[2026-04-14T13:41:01.335Z] [PDF Service] PDF Loaded, pages: 1
+[2026-04-14T13:41:01.377Z] [PDF Service] Extraction complete for: D:\New folder (34)\Hospital (2)\Hospital\backend\uploads\lab-reports\report-1776170340158-235714818.pdf

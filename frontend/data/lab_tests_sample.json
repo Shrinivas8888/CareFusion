@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Hemoglobin (Hb)",
+    "category": "Hematology",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "Complete Blood Count (CBC)",
+    "category": "Hematology",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "Total WBC Count",
+    "category": "Hematology",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "Differential WBC Count",
+    "category": "Hematology",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "Platelet Count",
+    "category": "Hematology",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "ESR",
+    "category": "Hematology",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "Blood Glucose Fasting",
+    "category": "Biochemistry",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "Blood Glucose PP",
+    "category": "Biochemistry",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.669Z",
+    "updatedAt": "2026-02-15T13:23:36.669Z"
+  },
+  {
+    "name": "HbA1c",
+    "category": "Biochemistry",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Lipid Profile",
+    "category": "Biochemistry",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Liver Function Test (LFT)",
+    "category": "Biochemistry",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Kidney Function Test (KFT)",
+    "category": "Biochemistry",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "TSH",
+    "category": "Thyroid",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "T3",
+    "category": "Thyroid",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "T4",
+    "category": "Thyroid",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Urine Routine Examination",
+    "category": "Urine Analysis",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Urine Culture",
+    "category": "Urine Analysis",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Urine Protein",
+    "category": "Urine Analysis",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Urine Creatinine",
+    "category": "Urine Analysis",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  },
+  {
+    "name": "Stool Routine",
+    "category": "Stool Analysis",
+    "description": "",
+    "createdAt": "2026-02-15T13:23:36.670Z",
+    "updatedAt": "2026-02-15T13:23:36.670Z"
+  }
+]
