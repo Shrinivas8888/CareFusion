@@ -34,4 +34,4 @@ RUN mkdir -p /data
 EXPOSE 5000 8108
 
 # Start BOTH Typesense + Node
-CMD sh -c "typesense-server --data-dir /data --api-key=xyz --enable-cors & node server.js"
+CMD sh -c "typesense-server --data-dir /data --api-key=xyz --enable-cors & sleep 5 && node server.js"

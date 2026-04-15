@@ -4,9 +4,8 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const path = require('path');
 const createDefaultAdmin = require('./utils/createDefaultAdmin');
-const { exec } = require('child_process'); // ✅ ADD
 
-// Load environment variables
+// Load env
 dotenv.config();
 
 const app = express();
@@ -16,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files (uploaded reports)
+// Static uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
@@ -38,39 +37,36 @@ app.use('/api/diagnostic-tests', require('./routes/diagnosticTestRoutes'));
 app.use('/api/insurance', require('./routes/insurance'));
 app.use('/api/public', require('./routes/public'));
 
-// ---------- CONNECT DB + RUN SCRIPTS ----------
-connectDB().then(() => {
-    createDefaultAdmin();
+// DB connect only
+connectDB()
+  .then(async () => {
+    console.log("✅ MongoDB connected");
 
-    console.log("✅ DB Connected & Admin Created");
+    await createDefaultAdmin();
+    console.log("✅ Default admin created");
+  })
+  .catch((err) => {
+    console.error("❌ DB connection error:", err);
+  });
 
-    // Run scripts automatically
-    exec("node scripts/syncLabTestsToTypesense.js", (err, stdout, stderr) => {
-        if (err) console.error("❌ LabTest Sync Error:", err);
-        else console.log("✅ LabTest Sync:", stdout);
-    });
-
-    exec("node scripts/syncToTypesense.js", (err, stdout, stderr) => {
-        if (err) console.error("❌ Typesense Sync Error:", err);
-        else console.log("✅ Typesense Sync:", stdout);
-    });
-});
-
-// ---------- SERVE FRONTEND ----------
+// Frontend serve
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get(/(.*)/, (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
-// Error handling middleware
+// Error handler
 app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({ message: 'Something went wrong!', error: err.message });
+  console.error(err.stack);
+  res.status(500).json({
+    message: "Something went wrong!",
+    error: err.message
+  });
 });
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
