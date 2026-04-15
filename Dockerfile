@@ -8,19 +8,30 @@ WORKDIR /app/frontend
 RUN npm install
 RUN npm run build
 
-# Step 2: Backend setup
+# Step 2: Final image
 FROM node:20
 
 WORKDIR /app
 
+# Install Typesense
+RUN apt-get update && apt-get install -y wget unzip \
+    && wget https://dl.typesense.org/releases/0.25.2/typesense-server-0.25.2-linux-amd64.tar.gz \
+    && tar -xzf typesense-server-0.25.2-linux-amd64.tar.gz \
+    && mv typesense-server /usr/bin/typesense-server
+
+# Copy backend
 COPY backend ./backend
 
-# frontend build copy
+# Copy frontend build
 COPY --from=build /app/frontend/dist ./frontend/build
 
 WORKDIR /app/backend
 RUN npm install
 
-EXPOSE 5000
+# Create data dir for Typesense
+RUN mkdir -p /data
 
-CMD ["node", "server.js"]
+EXPOSE 5000 8108
+
+# Start BOTH Typesense + Node
+CMD sh -c "typesense-server --data-dir /data --api-key=xyz --enable-cors & node server.js"
