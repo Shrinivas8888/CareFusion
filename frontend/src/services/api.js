@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = `http://${window.location.hostname}:5000/api`;
+// Auto-detect: localhost → use port 5000, production (Render) → same origin
+const API_URL = window.location.hostname === 'localhost'
+    ? 'http://localhost:5000/api'
+    : `${window.location.protocol}//${window.location.host}/api`;
 
 const api = axios.create({
     baseURL: API_URL,
