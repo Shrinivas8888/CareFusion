@@ -12,7 +12,8 @@ router.get('/doctors', async (req, res) => {
         const doctors = await Doctor.find({})
             .populate('userId', 'fullName email')
             .select('fullName specialization experience qualification profilePicture consultationFee contactNumber department')
-            .sort({ createdAt: -1 });
+            .sort({ createdAt: -1 })
+            .lean();
 
         console.log(`📋 Public API: Found ${doctors.length} doctors`);
         res.json(doctors);

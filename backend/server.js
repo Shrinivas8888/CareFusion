@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const path = require('path');
 const createDefaultAdmin = require('./utils/createDefaultAdmin');
+const compression = require('compression');
 
 // Load env
 dotenv.config();
@@ -11,6 +12,7 @@ dotenv.config();
 const app = express();
 
 // Middleware
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -25,7 +25,7 @@ const HomePage = () => {
     useEffect(() => {
         if (!loadingDoctors && window.jQuery && doctors.length > 0) {
             const $ = window.jQuery;
-            
+
             // Re-initialize carousels
             $(".price-carousel").owlCarousel({
                 autoplay: true,
@@ -124,8 +124,8 @@ const HomePage = () => {
                                 <a href="#home" className="nav-item nav-link active">Home</a>
                                 <a href="#about" className="nav-item nav-link">About</a>
                                 <a href="#service" className="nav-item nav-link">Service</a>
-                                <Link to="/login" className="nav-item nav-link" style={{color: '#13C5DD', fontWeight: 'bold'}}>Login</Link>
-                                <Link to="/register" className="nav-item nav-link" style={{color: '#354F8E', fontWeight: 'bold'}}>Register</Link>
+                                <Link to="/login" className="nav-item nav-link" style={{ color: '#13C5DD', fontWeight: 'bold' }}>Login</Link>
+                                <Link to="/register" className="nav-item nav-link" style={{ color: '#354F8E', fontWeight: 'bold' }}>Register</Link>
                             </div>
                         </div>
                     </nav>
@@ -418,16 +418,16 @@ const HomePage = () => {
                         <div className="text-center py-5"><div className="spinner-border text-primary"></div></div>
                     ) : (
                         <div className="owl-carousel team-carousel position-relative">
-                            {doctors.map(doctor => (
+                            {doctors.map((doctor, index) => (
                                 <div key={doctor._id} className="team-item">
                                     <div className="row g-0 bg-light rounded overflow-hidden">
                                         <div className="col-12 col-sm-5 h-100">
                                             <img
                                                 className="img-fluid h-100"
-                                                src={getProfileImageUrl(doctor.profilePicture) || `/medinova/img/team-1.jpg`}
+                                                src={getProfileImageUrl(doctor.profilePicture) || `/medinova/img/team-${(index % 3) + 1}.jpg`}
                                                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
                                                 alt={doctor.fullName}
-                                                onError={e => { e.target.src = '/medinova/img/team-1.jpg'; }}
+                                                onError={e => { e.target.src = `/medinova/img/team-${(index % 3) + 1}.jpg`; }}
                                             />
                                         </div>
                                         <div className="col-12 col-sm-7 h-100 d-flex flex-column">
@@ -460,7 +460,7 @@ const HomePage = () => {
                             <p className="mb-4">Carefusion Hospital - Your partner in health since 1999.</p>
                             <p className="mb-2"><i className="fa fa-map-marker-alt text-primary me-3"></i>123 Street, Healthcare City, India</p>
                             <p className="mb-2"><i className="fa fa-envelope text-primary me-3"></i>info@carefusion.com</p>
-                            <p className="mb-0"><i className="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                            <p className="mb-0"><i className="fa fa-phone-alt text-primary me-3"></i>+91 8888764131</p>
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
