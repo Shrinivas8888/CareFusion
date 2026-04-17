@@ -126,7 +126,7 @@ const BookAppointment = ({ patientId }) => {
     };
 
     const handleProceedToPayment = () => {
-        const doctorUpiId = selectedDoctor.upiId || 'hospital@upi';
+        const doctorUpiId = selectedDoctor.upiId || 'shrisolapure@axl';
         const amountToPay = selectedDoctor.consultationFee || 500;
         
         setUpiId(doctorUpiId);

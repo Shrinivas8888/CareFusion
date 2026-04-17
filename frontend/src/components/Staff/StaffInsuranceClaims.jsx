@@ -162,7 +162,7 @@ const FileClaimTab = () => {
                 ) : (
                     <div className="max-h-[300px] overflow-y-auto border border-gray-100 rounded-xl bg-gray-50 p-2 grid grid-2 gap-sm">
                         {filteredPatients.length === 0 ? (
-                            <div className="p-xl text-center text-gray-400 col-span-2">No patients matched your audit parameters.</div>
+                            <div className="p-xl text-center text-gray-400 col-span-2">No patients matched your search criteria.</div>
                         ) : filteredPatients.map(p => (
                             <div
                                 key={p._id}
@@ -447,11 +447,20 @@ const ManageClaimsTab = () => {
                                 </button>
                                 <div className="grid grid-2 gap-sm">
                                     <button
-                                        onClick={() => downloadPdf(
-                                            () => insuranceAPI.downloadMedicalFilePDF(claim.prescriptionId?._id || claim.prescriptionId || claim.prescriptionIds?.[0]),
-                                            `medical-file-${claim.patientId?.fullName?.replace(/\s/g, '-') || 'patient'}.pdf`,
-                                            claim._id
-                                        )}
+                                        onClick={() => {
+                                            const ids = claim.prescriptionIds?.length ? claim.prescriptionIds : (claim.prescriptionId ? [claim.prescriptionId] : []);
+                                            if (ids.length === 0) return;
+                                            ids.forEach((pId, idx) => {
+                                                const actualId = pId._id || pId;
+                                                setTimeout(() => {
+                                                    downloadPdf(
+                                                        () => insuranceAPI.downloadMedicalFilePDF(actualId),
+                                                        `medical-file-${claim.patientId?.fullName?.replace(/\s/g, '-') || 'patient'}-${idx + 1}.pdf`,
+                                                        claim._id
+                                                    );
+                                                }, idx * 1000);
+                                            });
+                                        }}
                                         disabled={updatingId === claim._id}
                                         className="btn btn-sm btn-outline-secondary font-bold"
                                     >

@@ -99,9 +99,16 @@ exports.getAppointments = async (req, res) => {
             query.appointmentDate = { $gte: startDate, $lte: endDate };
         }
 
+        query.status = { $ne: 'cancelled' };
+        query.$or = [
+            { staffApprovalStatus: 'approved' },
+            { staffApprovalStatus: { $exists: false } },
+            { staffApprovalStatus: null }
+        ];
+
         const appointments = await Appointment.find(query)
             .populate('patientId', 'fullName age gender mobile')
-            .sort({ appointmentDate: 1, timeSlot: 1 });
+            .sort({ appointmentDate: 1, slotStartTime: 1 });
 
         res.json(appointments);
     } catch (error) {
@@ -130,7 +137,12 @@ exports.getUpcomingAppointments = async (req, res) => {
         const appointments = await Appointment.find({
             doctorId: doctor._id,
             appointmentDate: { $gte: start, $lte: end },
-            status: { $in: ['scheduled', 'in-progress'] }
+            status: { $in: ['scheduled', 'in-progress'] },
+            $or: [
+                { staffApprovalStatus: 'approved' },
+                { staffApprovalStatus: { $exists: false } },
+                { staffApprovalStatus: null }
+            ]
         })
             .populate('patientId', 'fullName age gender mobile')
             .sort({ appointmentDate: 1, slotStartTime: 1 });

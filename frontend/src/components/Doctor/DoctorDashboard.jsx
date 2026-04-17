@@ -562,9 +562,7 @@ const CreatePrescription = ({ doctorId }) => {
                     <div key={i} className="card p-md mb-md" style={{ background: '#f8fafc', border: '1px dashed #cbd5e1' }}>
                         <div className="flex justify-between items-center mb-md">
                             <strong className="text-blue-600">Medicine #{i + 1}</strong>
-                            {formData.medicines.length > 1 && (
-                                <button type="button" onClick={() => removeMedicine(i)} className="btn btn-sm btn-outline-danger" style={{ padding: '2px 8px' }}>Remove</button>
-                            )}
+                            <button type="button" onClick={() => removeMedicine(i)} className="btn btn-sm btn-outline-danger" style={{ padding: '2px 8px' }}>Remove</button>
                         </div>
                         <div className="grid grid-2 gap-md">
                             <div className="form-group m-0">

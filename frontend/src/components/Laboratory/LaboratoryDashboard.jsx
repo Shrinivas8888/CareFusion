@@ -256,11 +256,11 @@ const SubmitReportModal = ({ test, onClose, onSuccess }) => {
 
                     {error && <div className="m-badge m-badge-red w-full py-3 text-center mb-xl">{error}</div>}
 
-                    <div className="flex gap-md mt-2xl">
+                    <div className="flex gap-md mt-2xl justify-end">
                         <button type="button" className="btn btn-outline-secondary h-12 px-xl" onClick={onClose} disabled={uploading} style={{ borderRadius: '14px' }}>
                             Cancel
                         </button>
-                        <button type="submit" className="btn btn-primary flex-1 h-12 shadow-xl" disabled={uploading} style={{ borderRadius: '14px' }}>
+                        <button type="submit" className="btn btn-primary h-12 shadow-xl px-xl" disabled={uploading} style={{ borderRadius: '14px' }}>
                             {uploading ? '⏳ TRANSMITTING...' : isReplace ? 'FINALIZE REPLACEMENT' : 'FINALIZE SUBMISSION'}
                         </button>
                     </div>

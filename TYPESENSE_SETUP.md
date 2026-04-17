@@ -22,7 +22,8 @@ You should see version numbers (e.g., Docker version 24.x.x)
 
 ## Step 2: Start Typesense
 
-### Navigate to Project Directory
+### Navigate to P
+roject Directory
 ```powershell
 cd "d:\New folder (25)\Hospital\Hospital"
 ```
@@ -31,7 +32,6 @@ cd "d:\New folder (25)\Hospital\Hospital"
 ```powershell
 docker-compose up -d
 ```
-
 **What this does:**
 - Downloads Typesense image (~50MB)
 - Creates and starts Typesense container
