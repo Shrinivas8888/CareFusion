@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { appointmentAPI, availabilityAPI, staffAPI, adminAPI } from '../../services/api';
+import { appointmentAPI, availabilityAPI, staffAPI, adminAPI, BASE_URL as API_BASE_URL } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
 import EmergencyShiftModal from './EmergencyShiftModal';
 import PatientProfileSummary from '../Shared/PatientProfileSummary';
@@ -13,7 +13,6 @@ const TAB_PAYMENTS = 'payments';
 const TAB_ALL = 'all';
 const TAB_BOOK = 'book';
 
-const API_BASE_URL = 'http://localhost:5000'; // Adjust based on your environment
 
 /* ═══════════════════════════════════════════════════════════════
    Main Component

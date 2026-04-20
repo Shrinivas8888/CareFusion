@@ -5,7 +5,7 @@ import './PatientDashboard.css';
 import { useState, useEffect, useRef } from 'react';
 
 import { useAuth } from '../../context/AuthContext';
-import { patientAPI, appointmentAPI, feedbackAPI, insuranceAPI } from '../../services/api';
+import { patientAPI, appointmentAPI, feedbackAPI, insuranceAPI, BASE_URL } from '../../services/api';
 import { getProfileImageUrl } from '../../utils/imageUtils';
 import BookAppointment from './BookAppointment';
 import MyAppointments from './MyAppointments';
@@ -439,7 +439,7 @@ const LabReports = () => {
                                             <td>
                                                 {report.reportPDF ? (
                                                     <a
-                                                        href={`http://localhost:5000/${(report.reportPDF || '').replace(/\\/g, '/')}`}
+                                                        href={`${BASE_URL}/${(report.reportPDF || '').replace(/\\/g, '/')}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="lab-view-btn"

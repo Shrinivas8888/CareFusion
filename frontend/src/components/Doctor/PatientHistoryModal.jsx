@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { doctorAPI } from '../../services/api';
+import { doctorAPI, BASE_URL } from '../../services/api';
 import './PatientHistoryModal.css';
 
 const PatientHistoryModal = ({ patientId, bookedForMember, onClose }) => {
@@ -187,7 +187,7 @@ const PatientHistoryModal = ({ patientId, bookedForMember, onClose }) => {
                                                     )}
                                                     {test.reportPDF && (
                                                         <a
-                                                            href={`http://localhost:5000/${test.reportPDF.replace(/\\/g, '/')}`}
+                                                            href={`${BASE_URL}/${test.reportPDF.replace(/\\/g, '/')}`}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             className="btn btn-sm btn-info"

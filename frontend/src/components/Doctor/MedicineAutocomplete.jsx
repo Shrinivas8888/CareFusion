@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import { API_URL } from '../../services/api';
 import './MedicineAutocomplete.css';
 
 const MedicineAutocomplete = ({ onSelect, placeholder = "Search medicine...", clearOnSelect = true }) => {
@@ -38,7 +39,7 @@ const MedicineAutocomplete = ({ onSelect, placeholder = "Search medicine...", cl
         try {
             const token = sessionStorage.getItem('token');
             const response = await axios.get(
-                `http://localhost:5000/api/medicines/search?q=${encodeURIComponent(searchQuery)}&limit=10`,
+                `${API_URL}/medicines/search?q=${encodeURIComponent(searchQuery)}&limit=10`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                     timeout: 5000 // Increased timeout to wait for MongoDB fallback

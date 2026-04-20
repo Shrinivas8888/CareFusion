@@ -3,7 +3,7 @@ import Navbar from '../Shared/Navbar';
 import Sidebar from '../Shared/Sidebar';
 import '../Patient/PatientDashboard.css';
 import { useState, useEffect, useRef } from 'react';
-import { laboratoryAPI } from '../../services/api';
+import { laboratoryAPI, BASE_URL } from '../../services/api';
 import './LaboratoryDashboard.css';
 import LabExpenseTracker from './LabExpenseTracker';
 
@@ -518,7 +518,7 @@ const TestRequests = () => {
                                                     {test.reportPDF ? (
                                                         <>
                                                             <a
-                                                                href={`http://localhost:5000/${(test.reportPDF || '').replace(/\\/g, '/')}`}
+                                                                href={`${BASE_URL}/${(test.reportPDF || '').replace(/\\/g, '/')}`}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                                 className="btn btn-sm btn-link text-blue-600 font-black flex items-center gap-1 p-0"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../../services/api';
 import './ClaimVerification.css';
 
 const ClaimVerification = () => {
@@ -28,7 +29,7 @@ const ClaimVerification = () => {
         setClaimData(null);
 
         try {
-            const response = await axios.get(`http://localhost:5000/api/public/verify-claim/${verifyRef}`);
+            const response = await axios.get(`${API_URL}/public/verify-claim/${verifyRef}`);
             setClaimData(response.data.claim);
         } catch (err) {
             setError(err.response?.data?.message || 'Invalid reference or claim not found.');
