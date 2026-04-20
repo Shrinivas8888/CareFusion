@@ -155,8 +155,8 @@ const HomePage = () => {
                 <div className="container">
                     <div className="row gx-5">
                         <div className="col-lg-5 mb-5 mb-lg-0" style={{ minHeight: '500px' }}>
-                            <div className="position-relative h-100">
-                                <img className="position-absolute w-100 h-100 rounded" src="/medinova/img/about.jpg" style={{ objectFit: 'cover' }} alt="About" />
+                            <div className="position-relative h-100 bg-light rounded d-flex align-items-center justify-content-center p-3" style={{ minHeight: '500px' }}>
+                                <img className="img-fluid" src="/carefusion-logo.svg" alt="CareFusion Logo" style={{ maxHeight: '400px' }} />
                             </div>
                         </div>
                         <div className="col-lg-7">
@@ -350,7 +350,7 @@ const HomePage = () => {
                     <div className="owl-carousel price-carousel position-relative" style={{ padding: '0 45px 45px 45px' }}>
                         <div className="bg-light rounded text-center">
                             <div className="position-relative">
-                                <img className="img-fluid rounded-top" src="/medinova/img/price-1.jpg" alt="" />
+                                <img className="img-fluid rounded-top w-100" src="/carefusion-logo.svg" alt="CareFusion Logo" style={{ height: '250px', objectFit: 'contain', backgroundColor: '#f8f9fa', padding: '1rem' }} />
                                 <div className="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style={{ background: 'rgba(29, 42, 77, .8)' }}>
                                     <h3 className="text-white">Pregnancy Care</h3>
                                     <h1 className="display-4 text-white mb-0">
@@ -368,7 +368,7 @@ const HomePage = () => {
                         </div>
                         <div className="bg-light rounded text-center">
                             <div className="position-relative">
-                                <img className="img-fluid rounded-top" src="/medinova/img/price-2.jpg" alt="" />
+                                <img className="img-fluid rounded-top w-100" src="/carefusion-logo.svg" alt="CareFusion Logo" style={{ height: '250px', objectFit: 'contain', backgroundColor: '#f8f9fa', padding: '1rem' }} />
                                 <div className="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style={{ background: 'rgba(29, 42, 77, .8)' }}>
                                     <h3 className="text-white">Health Checkup</h3>
                                     <h1 className="display-4 text-white mb-0">
@@ -386,7 +386,7 @@ const HomePage = () => {
                         </div>
                         <div className="bg-light rounded text-center">
                             <div className="position-relative">
-                                <img className="img-fluid rounded-top" src="/medinova/img/price-3.jpg" alt="" />
+                                <img className="img-fluid rounded-top w-100" src="/carefusion-logo.svg" alt="CareFusion Logo" style={{ height: '250px', objectFit: 'contain', backgroundColor: '#f8f9fa', padding: '1rem' }} />
                                 <div className="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style={{ background: 'rgba(29, 42, 77, .8)' }}>
                                     <h3 className="text-white">Dental Care</h3>
                                     <h1 className="display-4 text-white mb-0">
@@ -421,14 +421,20 @@ const HomePage = () => {
                             {doctors.map((doctor, index) => (
                                 <div key={doctor._id} className="team-item">
                                     <div className="row g-0 bg-light rounded overflow-hidden">
-                                        <div className="col-12 col-sm-5 h-100">
-                                            <img
-                                                className="img-fluid h-100"
-                                                src={getProfileImageUrl(doctor.profilePicture) || `/medinova/img/team-${(index % 3) + 1}.jpg`}
-                                                style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                                                alt={doctor.fullName}
-                                                onError={e => { e.target.src = `/medinova/img/team-${(index % 3) + 1}.jpg`; }}
-                                            />
+                                        <div className="col-12 col-sm-5 h-100 d-flex align-items-center justify-content-center bg-secondary" style={{ minHeight: '300px' }}>
+                                            {getProfileImageUrl(doctor.profilePicture) ? (
+                                                <img
+                                                    className="img-fluid h-100 w-100"
+                                                    src={getProfileImageUrl(doctor.profilePicture)}
+                                                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                                                    alt={doctor.fullName}
+                                                    onError={(e) => {
+                                                        e.target.style.display = 'none';
+                                                    }}
+                                                />
+                                            ) : (
+                                                <i className="fa fa-user-md fa-5x text-white"></i>
+                                            )}
                                         </div>
                                         <div className="col-12 col-sm-7 h-100 d-flex flex-column">
                                             <div className="mt-auto p-4">
